@@ -66,6 +66,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+# DT2W
+PRODUCT_PACKAGES += \
+    dt2w.service.xiaomi_sm6250
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp_whitelist_co.potatoproject.dt2w.xiaomi.sm6250.xml:system/etc/permissions/privapp_whitelist_co.potatoproject.dt2w.xiaomi.sm6250.xml
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
