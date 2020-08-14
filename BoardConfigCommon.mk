@@ -192,3 +192,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit proprietary blobs
 -include vendor/xiaomi/sm6250-common/BoardConfigVendor.mk
+
+# Inherit GApps
+-include vendor/gapps/common/BoardConfigVendor.mk

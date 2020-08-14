@@ -10,6 +10,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit proprietary targets
 $(call inherit-product-if-exists, vendor/xiaomi/sm6250-common/sm6250-common-vendor.mk)
 
+# Inherit GApps
+$(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+
 # Inherit PSU
 $(call inherit-product-if-exists, vendor/google/psu/google-psu.mk)
 
