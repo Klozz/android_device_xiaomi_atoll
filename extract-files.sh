@@ -11,9 +11,15 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-AOSIP_ROOT="${MY_DIR}"/../../..
+# Required!
+export DEVICE=curtana
+export VENDOR=xiaomi
 
-HELPER="${AOSIP_ROOT}/vendor/aosip/build/tools/extract_utils.sh"
+export DEVICE_BRINGUP_YEAR=2020
+
+XPERIENCE_ROOT="${MY_DIR}"/../../..
+
+HELPER="${XPERIENCE_ROOT}/vendor/xperience/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -59,19 +65,11 @@ function blob_fixup() {
     esac
 }
 
-# Initialize the helper for common device
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${AOSIP_ROOT}" true "${CLEAN_VENDOR}"
-
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
-        "${KANG}" --section "${SECTION}"
-
-if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     source "${MY_DIR}/../${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${AOSIP_ROOT}" false "${CLEAN_VENDOR}"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${XPERIENCE_ROOT}" false "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" \
             "${KANG}" --section "${SECTION}"
-fi
 
 "${MY_DIR}/setup-makefiles.sh"
