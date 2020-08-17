@@ -94,8 +94,8 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_xiaomi_sm6250
-TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_sm6250
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_curtana
+TARGET_RECOVERY_DEVICE_MODULES := libinit_curtana
 
 # Media
 TARGET_USES_ION := true
@@ -191,4 +191,5 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit proprietary blobs
--include vendor/xiaomi/sm6250-common/BoardConfigVendor.mk
+-include vendor/xiaomi/curtana/BoardConfigVendor.mk
+
