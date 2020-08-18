@@ -82,6 +82,24 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
+# Camera sensors - curtana & gram
+vendor/lib/camera/com.qti.sensormodule.ofilm_gc02m1_filter.bin
+vendor/lib/camera/com.qti.sensormodule.ofilm_s5kgm2.bin
+vendor/lib/camera/com.qti.sensormodule.sunny_imx582.bin
+vendor/lib/camera/com.qti.sensormodule.sunny_s5kgm2.bin
+vendor/lib/camera/com.qti.tuned.ofilm_gc02m1.bin
+vendor/lib/camera/com.qti.tuned.ofilm_gc02m1_filter.bin
+vendor/lib/camera/com.qti.tuned.ofilm_s5kgm2.bin
+vendor/lib/camera/com.qti.tuned.sunny_imx582.bin
+vendor/lib64/camera/com.qti.sensormodule.ofilm_gc02m1_filter.bin
+vendor/lib64/camera/com.qti.sensormodule.ofilm_s5kgm2.bin
+vendor/lib64/camera/com.qti.sensormodule.sunny_imx582.bin
+vendor/lib64/camera/com.qti.sensormodule.sunny_s5kgm2.bin
+vendor/lib64/camera/com.qti.tuned.ofilm_gc02m1.bin
+vendor/lib64/camera/com.qti.tuned.ofilm_gc02m1_filter.bin
+vendor/lib64/camera/com.qti.tuned.ofilm_s5kgm2.bin
+vendor/lib64/camera/com.qti.tuned.sunny_imx582.bin
+
 # CDSP
 vendor/bin/cdsprpcd
 vendor/lib/libcdsp_default_listener.so
