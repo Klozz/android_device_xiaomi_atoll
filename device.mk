@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += \
     dt2w.service.xiaomi_sm6250
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp_whitelist_co.potatoproject.dt2w.xiaomi.sm6250.xml:system/etc/permissions/privapp_whitelist_co.potatoproject.dt2w.xiaomi.sm6250.xml
+    $(LOCAL_PATH)/configs/privapp_whitelist_mx.xperience.dt2w.xiaomi.sm6250.xml:system/etc/permissions/privapp_whitelist_mx.xperience.dt2w.xiaomi.sm6250.xml
 
 # Fastbootd
 PRODUCT_PACKAGES += \

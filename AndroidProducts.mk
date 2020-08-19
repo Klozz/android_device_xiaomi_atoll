@@ -5,7 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_curtana.mk
+    $(LOCAL_DIR)/lineage_curtana.mk \
+    $(LOCAL_DIR)/xperience_curtana.mk
 
 COMMON_LUNCH_CHOICES := \
     lineage_curtana-user \

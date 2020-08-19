@@ -1,4 +1,4 @@
-package co.potatoproject.dt2w.xiaomi.sm6250;
+package mx.xperience.dt2w.xiaomi.sm6250;
 
 import android.app.Service;
 import android.content.ContentResolver;
