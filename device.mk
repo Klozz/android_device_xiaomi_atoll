@@ -46,9 +46,40 @@ PRODUCT_PACKAGES += \
     r-gsi.avbpubkey \
     s-gsi.avbpubkey
 
+
 # Bluetooth
 PRODUCT_PACKAGES += \
-    BluetoothQti
+    audio.bluetooth.default \
+    audio.hearing_aid.default \
+    android.hardware.bluetooth.audio@2.0-impl
+
+# Bluetooth QTI
+BT := javax.btobex
+BT += libattrib_static
+BT += libbt-vendor
+BT += libbthost_if
+BT += libbt-logClient
+BT += bt_logger
+BT += libbluetooth_qti
+BT += libbt-hidlclient
+BT += BluetoothExt
+BT += libbtconfigstore
+BT += audio.a2dp.default_qti
+BT += audio.hearing_aid.default_qti
+
+PRODUCT_PACKAGES += \
+    $(BT) \
+    liba2dpoffload \
+    com.qualcomm.qti.bluetooth_audio@1.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.bluetooth_dun@1.0
+
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService \
+    com.dsi.ant.antradio_library
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -159,6 +190,7 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-system
 
 # Partitions
+PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # RCS
