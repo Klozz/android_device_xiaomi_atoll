@@ -139,7 +139,6 @@ void load_dalvik_properties() {
 
 
 void vendor_load_properties() {
-    load_common_properties();
     load_device_properties();
     load_dalvik_properties();
 }
