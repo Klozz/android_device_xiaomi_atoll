@@ -44,3 +44,5 @@ PRODUCT_MODEL := Redmi Note 9s
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 TARGET_VENDOR := Xiaomi
+
+#TARGET_CUSTOM_KERNEL := yuki_kernel
