@@ -111,6 +111,39 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+# Display
+PRODUCT_PACKAGES += \
+    gralloc.atoll \
+    hwcomposer.atoll \
+    memtrack.atoll \
+    libdisplayconfig \
+    libdisplayconfig.vendor \
+    liboverlay \
+    libtinyxml \
+    libvulkan \
+    libqdMetaData \
+    libqdMetaData.system
+
+PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0_32 \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@2.0-impl-qti-display \
+    android.hardware.graphics.composer@2.3-service \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.renderscript@1.0-impl \
+    android.frameworks.displayservice@1.0 \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.display.config@1.1 \
+    vendor.display.config@1.1_vendor
+
+# Display interfaces
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.composer@1.0.vendor \
+    vendor.qti.hardware.display.composer@2.0.vendor \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
+
 # DT2W
 PRODUCT_PACKAGES += \
     dt2w.service.xiaomi_sm6250
@@ -130,9 +163,6 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio \
     qcom.fmradio.xml
-
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
 
 # fwk-detect
 PRODUCT_PACKAGES += \
