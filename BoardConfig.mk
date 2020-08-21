@@ -109,8 +109,8 @@ ODM_MANIFEST_SKUS += \
 ODM_MANIFEST_JOYEUSE_FILES := $(DEVICE_PATH)/manifest_joyeuse.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_sm6250
-TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_sm6250
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_atoll
+TARGET_RECOVERY_DEVICE_MODULES := libinit_atoll
 
 # Media
 TARGET_USES_ION := true
