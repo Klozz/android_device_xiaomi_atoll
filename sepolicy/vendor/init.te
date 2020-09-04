@@ -1,0 +1,2 @@
+allow init bt_firmware_file:filesystem read;
+allow init firmware_file:filesystem read;

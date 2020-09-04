@@ -1,0 +1,2 @@
+#/sys/devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/type
+allow hal_health_default sysfs:file r_file_perms;
