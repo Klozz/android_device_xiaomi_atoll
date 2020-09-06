@@ -17,14 +17,15 @@
 #include <cstdlib>
 #include <cstring>
 #include <sys/sysinfo.h>
+#include <unistd.h>
 #include <vector>
 
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "init_common.h"
 #include "vendor_init.h"
+#include "property_service.h"
 
 using android::init::property_set;
 using android::base::GetProperty;
