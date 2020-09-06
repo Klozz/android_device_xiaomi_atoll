@@ -15,7 +15,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    vendor/nxp/opensource
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
@@ -142,10 +143,6 @@ PRODUCT_COPY_FILES += \
 # Network
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
-
-# NFC
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \

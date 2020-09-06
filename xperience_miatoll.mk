@@ -4,18 +4,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-proxperiencect, device/xiaomi/miatoll/device.mk)
+
+# Inherit from lavender device
+$(call inherit-product,  device/xiaomi/miatoll/device.mk)
 
 # Inherit some common XPerience stuff.
 $(call inherit-product, vendor/xperience/config/common_full_phone.mk)
 
 #CAF prop CAF includes
 include device/qcom/common/common.mk
-
-
-TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_NAME := xperience_miatoll
 PRODUCT_DEVICE := miatoll
