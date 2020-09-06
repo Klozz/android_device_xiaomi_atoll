@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifneq ($(PRODUCT_NAME),xperience_miatoll)
 include $(CLEAR_VARS)
 LOCAL_SHARED_LIBRARIES := libhidltransport
 LOCAL_MODULE := android.hidl.base@1.0
@@ -44,3 +45,4 @@ LOCAL_INSTALLED_MODULE_STEM := android.hidl.manager@1.0.so
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include $(BUILD_SHARED_LIBRARY)
+endif
