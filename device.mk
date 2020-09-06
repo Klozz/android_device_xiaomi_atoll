@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
 # Inherit proprietary targets
 $(call inherit-product-if-exists, vendor/xiaomi/miatoll/miatoll-vendor.mk)
 
@@ -15,6 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
@@ -144,7 +145,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/pn5xx
+    vendor/nxp/opensource
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -222,10 +223,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -311,3 +308,19 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# commn
+TARGET_COMMON_QTI_COMPONENTS := \
+    bt \
+    perf
+
+###################################################################################
+# This is the End of target.mk file.
+# Now, Pickup other split product.mk files:
+###################################################################################
+$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/*.mk)
+$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/vendor/*.mk)
+###################################################################################
+# Pickup blobs to satisfy LMKD
+#$(call inherit-product, vendor/qcom/common/performance/perf-common.mk)
+###################################################################################

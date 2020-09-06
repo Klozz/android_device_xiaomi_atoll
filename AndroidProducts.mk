@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/du.mk
+    $(LOCAL_DIR)/xperience_miatoll.mk
 
 COMMON_LUNCH_CHOICES := \
-    du_miatoll-user \
-    du_miatoll-userdebug \
-    du_miatoll-eng
+    xperience_miatoll-user \
+    xperience_miatoll-userdebug \
+    xperience_miatoll-eng
