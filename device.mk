@@ -188,6 +188,12 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage/packages/apps/Snap \
     $(LOCAL_PATH)/overlay-system
 
+ifeq ($(PRODUCT_ORS_DU)),true)
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    vendor/themes/overlay
+
+endif
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
