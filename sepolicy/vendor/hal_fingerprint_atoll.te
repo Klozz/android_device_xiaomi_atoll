@@ -1,2 +1,0 @@
-allow hal_fingerprint_atoll storage_file:lnk_file read;
-allow hal_fingerprint_atoll mnt_user_file:dir search;
