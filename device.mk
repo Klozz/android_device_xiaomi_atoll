@@ -95,6 +95,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+# D
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.0-service \
+    android.hardware.broadcastradio@1.0-impl
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -215,6 +220,22 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.xiaomi_sm6250
+
+# Radio - NewtWorking
+PRODUCT_PACKAGES += libvndfwk_detect_jni.qti
+PRODUCT_PACKAGES += libqti_vndfwk_detect
+PRODUCT_PACKAGES += libvndfwk_detect_jni.qti.vendor
+PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0 \
+    libjson \
+    librmnetctl \
+    libxml2 \
+    libprotobuf-cpp-full
 
 # RCS
 PRODUCT_PACKAGES += \
