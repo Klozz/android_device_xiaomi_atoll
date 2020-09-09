@@ -54,8 +54,25 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     Bluetooth \
+    BluetoothExt \
     libbluetooth_qti \
     libbt-vendor
+
+PRODUCT_PACKAGES += \	
+    libbt-hidlclient \
+    javax.btobex \
+    libattrib_static \
+    libbt-vendor \
+    libbt-logClient \
+    bt_logger \
+    libbluetooth_qti \
+    libbt-hidlclient \
+    libbtconfigstore \
+    com.qualcomm.qti.bluetooth_audio@1.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.bluetooth_dun@1.0
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
