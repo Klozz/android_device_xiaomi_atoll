@@ -58,7 +58,7 @@ PRODUCT_PACKAGES += \
     libbluetooth_qti \
     libbt-vendor
 
-PRODUCT_PACKAGES += \	
+PRODUCT_PACKAGES += \
     libbt-hidlclient \
     javax.btobex \
     libattrib_static \
