@@ -18,7 +18,8 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
 BOARD_USES_CAF_LIBJSON := true
 
-PRODUCT_ORS_DU := true
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    vendor/themes/overlay
 
 PRODUCT_NAME := du_miatoll
 PRODUCT_DEVICE := miatoll
