@@ -10,13 +10,6 @@ $(call inherit-product, device/xiaomi/miatoll/device.mk)
 $(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
-WITH_GAPPS := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_WIFI_EXT := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-
-BOARD_USES_CAF_LIBJSON := true
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     vendor/themes/overlay
@@ -29,4 +22,4 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+#$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
