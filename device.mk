@@ -45,9 +45,6 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml
 
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
-
 # fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
@@ -238,7 +235,7 @@ PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4 \
-    android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.1 \
     android.hardware.secure_element@1.0 \
     libjson \
     librmnetctl \
@@ -252,6 +249,10 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
+# Vendor libstdc++
+PRODUCT_PACKAGES += \
+    libstdc++.vendor
+	
 # Recovery
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
