@@ -67,10 +67,8 @@ PRODUCT_PACKAGES += \
     libbt-hidlclient \
     javax.btobex \
     libattrib_static \
-    libbt-vendor \
     libbt-logClient \
     bt_logger \
-    libbluetooth_qti \
     libbt-hidlclient \
     libbtconfigstore \
     com.qualcomm.qti.bluetooth_audio@1.0 \
