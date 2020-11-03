@@ -377,13 +377,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
 # This is the End of target.mk file.
 # Now, Pickup other split product.mk files:
 ###################################################################################
-#$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/*.mk)
-$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/app_mms_product.mk)
-$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/app_qtiSoundRecorder_product.mk)
-$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/app_snapcam_system_product.mk)
-$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/app_snapMusic_product.mk)
-$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/display-product-system.mk)
-$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/nfc-system-product.mk)
+$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/*.mk)
 $(call inherit-product-if-exists, vendor/qcom/defs/product-defs/vendor/*.mk)
 ###################################################################################
 # Pickup blobs to satisfy LMKD
