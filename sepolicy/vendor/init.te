@@ -1,2 +1,5 @@
 # Needed by vibrator calib
 allow init sysfs:file { create read open };
+
+#light hal
+allow init sysfs_graphics:file rw_file_perms;
