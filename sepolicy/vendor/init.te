@@ -1,0 +1,2 @@
+# Needed by vibrator calib
+allow init sysfs:file { create read open };
