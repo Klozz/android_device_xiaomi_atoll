@@ -549,6 +549,7 @@ vendor/lib/camera.device@3.5-impl.so
 vendor/lib/camera/com.qti.eeprom.sunny_gc8034.so
 vendor/lib/camera/com.qti.sensor.curtana_gc02m1.so
 vendor/lib/camera/com.qti.sensor.curtana_gc8034.so
+vendor/lib/camera/com.qti.sensor.curtana_imx582.so
 vendor/lib/camera/com.qti.sensor.curtana_ov16a1q.so
 vendor/lib/camera/com.qti.sensor.curtana_ov2180.so
 vendor/lib/camera/com.qti.sensor.curtana_ov8856.so
