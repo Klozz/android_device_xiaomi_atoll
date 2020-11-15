@@ -230,4 +230,4 @@ persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
 # Camera Aux Package list
-vendor.camera.aux.packagelist=com.google.android.GoogleCamera,org.codeaurora.snapcam,com.android.camera,mx.xperience.camera
+vendor.camera.aux.packagelist=com.google.android.GoogleCamera,org.codeaurora.snapcam,com.android.camera

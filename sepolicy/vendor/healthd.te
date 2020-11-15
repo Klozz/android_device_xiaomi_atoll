@@ -1,2 +1,0 @@
-#allow maxim_ds28e16 to read sysfs nodes
-allow healthd sysfs:file r_file_perms;
