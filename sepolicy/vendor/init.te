@@ -3,3 +3,6 @@
 
 #light hal
 allow init sysfs_graphics:file rw_file_perms;
+
+#thermal config mount
+allow init vendor_configs_file:file mounton;

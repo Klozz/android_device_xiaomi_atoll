@@ -1,3 +1,10 @@
+# Battery only for joyeuse - excalibur
+genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/    u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/type    u:object_r:sysfs_battery_supply:s0
+
 #brightness
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight/brightness   u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/white/breath    u:object_r:sysfs_graphics:s0
+
+# Log call this node as vibrator idk
+genfscon sysfs /devices/platform/soc/890000.i2c/i2c-1/1-005a/name    u:object_r:sysfs_vibrator:s0
