@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2020 The LineageOS Project
- * Copyright (C) 2020 The XPerience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -141,18 +140,11 @@ void load_device_properties() {
                 "gram_in-user 10 QKQ1.191215.002 V11.0.3.0.QJPINXM release-keys",
                 "POCO", "gram", "POCO M2 Pro");
     } else if (hwname == "joyeuse") {
-		if (region == "VDF_TWO") {
-            set_device_props(
-                "Redmi/joyeuse_eea/joyeuse:10/QKQ1.191215.002/V11.0.6.0.QJZEUXM:user/release-keys",
-				"joyeuse_eea-user 10 QKQ1.191215.002 V11.0.6.0.QJZEUXM release-keys",
-				"Redmi", "joyeuse_eea", "Redmi Note 9 Pro");
-		} else {
-            set_device_props(
+        set_device_props(
                 "Redmi/joyeuse_global/joyeuse:10/QKQ1.191215.002/V11.0.5.0.QJZMIXM:user/release-keys",
                 "joyeuse_global-user 10 QKQ1.191215.002 V11.0.5.0.QJZMIXM release-keys",
                 "Redmi", "joyeuse", "Redmi Note 9 Pro");
-		}
-	}
+    }
 }
 
 void vendor_load_properties() {
