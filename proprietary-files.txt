@@ -92,6 +92,7 @@ product/framework/QtiTelephonyServicelibrary.jar
 # Wifi Display System Service App
 -framework/WfdCommon.jar
 -priv-app/WfdService/WfdService.apk
+lib64/libdisplayconfig.so
 lib64/libFileMux.so
 lib64/libmmosal.so
 lib64/libmmparser_lite.so
@@ -113,11 +114,25 @@ lib64/libwfduibcsinkinterface.so
 lib64/libwfduibcsrc.so
 lib64/libwfduibcsrcinterface.so
 etc/wfdconfigsink.xml
+product/lib64/vendor.display.config@1.5.so
+product/lib64/vendor.display.config@1.0.so
+product/lib64/vendor.display.config@1.7.so
+product/lib64/vendor.display.config@1.2.so
+product/lib64/vendor.display.config@1.6.so
+product/lib64/vendor.display.config@1.9.so
+product/lib64/vendor.display.config@1.10.so
+product/lib64/vendor.display.config@1.8.so
+product/lib64/vendor.display.config@1.11.so
+product/lib64/vendor.display.config@1.12.so
+product/lib64/vendor.display.config@1.1.so
+product/lib64/vendor.display.config@1.4.so
+product/lib64/vendor.display.config@1.3.so
 
 # WiFi Display System Service
 bin/wfdservice
 etc/init/wfdservice.rc
 lib/libFileMux.so
+lib/libdisplayconfig.so
 lib/libmmosal.so
 lib/libmmparser_lite.so
 lib/libmmrtpdecoder.so
@@ -138,6 +153,19 @@ lib/libwfduibcsink.so
 lib/libwfduibcsinkinterface.so
 lib/libwfduibcsrc.so
 lib/libwfduibcsrcinterface.so
+product/lib/vendor.display.config@1.0.so
+product/lib/vendor.display.config@1.1.so
+product/lib/vendor.display.config@1.10.so
+product/lib/vendor.display.config@1.11.so
+product/lib/vendor.display.config@1.12.so
+product/lib/vendor.display.config@1.2.so
+product/lib/vendor.display.config@1.3.so
+product/lib/vendor.display.config@1.4.so
+product/lib/vendor.display.config@1.5.so
+product/lib/vendor.display.config@1.6.so
+product/lib/vendor.display.config@1.7.so
+product/lib/vendor.display.config@1.8.so
+product/lib/vendor.display.config@1.9.so
 product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 
 # Wifi Display Vendor Common
@@ -206,6 +234,7 @@ vendor/bin/hw/android.hardware.drm@1.2-service.clearkey
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti
+vendor/bin/hw/android.hardware.graphics.composer@2.3-service
 vendor/bin/hw/android.hardware.health@2.0-service
 vendor/bin/hw/android.hardware.ir@1.0-service
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
@@ -363,6 +392,7 @@ vendor/etc/init/android.hardware.drm@1.2-service.clearkey.rc
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/etc/init/android.hardware.gnss@2.0-service-qti.rc
+vendor/etc/init/android.hardware.graphics.composer@2.3-service.rc
 vendor/etc/init/android.hardware.health@2.0-service.rc
 vendor/etc/init/android.hardware.ir@1.0-service.rc
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
@@ -621,6 +651,7 @@ vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so
 vendor/lib/hw/android.hardware.drm@1.0-impl.so
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib/hw/android.hardware.gnss@2.0-impl-qti.so
+vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so
 vendor/lib/hw/android.hardware.ir@1.0-impl.so
 vendor/lib/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib/hw/android.hardware.renderscript@1.0-impl.so
@@ -634,6 +665,9 @@ vendor/lib/hw/camera.qcom.so
 vendor/lib/hw/com.qti.chi.override.so
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib/hw/consumerir.default.so
+vendor/lib/hw/gralloc.atoll.so
+vendor/lib/hw/hwcomposer.atoll.so
+vendor/lib/hw/memtrack.atoll.so
 vendor/lib/hw/sound_trigger.primary.atoll.so
 vendor/lib/hw/thermal.atoll.so
 vendor/lib/hw/vendor.qti.gnss@3.0-impl.so
@@ -721,6 +755,8 @@ vendor/lib/libcvp_stub.so
 vendor/lib/libdataitems.so
 vendor/lib/libdiag.so
 vendor/lib/libdisp-aba.so
+vendor/lib/libdisplayconfig.so
+vendor/lib/libdisplaydebug.so
 vendor/lib/libdisplayqos.so
 vendor/lib/libdng_sdkvendor.so
 vendor/lib/libdpmqmihal.so
@@ -755,6 +791,9 @@ vendor/lib/libgnss.so
 vendor/lib/libGPreqcancel.so
 vendor/lib/libGPreqcancel_svc.so
 vendor/lib/libgps.utils.so
+vendor/lib/libgpu_tonemapper.so
+vendor/lib/libgralloccore.so
+vendor/lib/libgrallocutils.so
 vendor/lib/libgsl.so
 vendor/lib/libgui_vendor.so
 vendor/lib/libHalSuperSensorServer.so
@@ -848,6 +887,7 @@ vendor/lib/libqcrilFramework.so
 vendor/lib/libqdi.so
 vendor/lib/libqdMetaData.so
 vendor/lib/libqdp.so
+vendor/lib/libqdutils.so
 vendor/lib/libqisl.so
 vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
@@ -861,6 +901,7 @@ vendor/lib/libqrtr.so
 vendor/lib/libqsap_sdk.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libqseed3.so
+vendor/lib/libqservice.so
 vendor/lib/libqsocket.so
 vendor/lib/libqti-iopd-client.so
 vendor/lib/libqti-iopd.so
@@ -889,6 +930,7 @@ vendor/lib/libsdm-diag.so
 vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libsdmcore.so
 vendor/lib/libsdmextension.so
+vendor/lib/libsdmutils.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsensorslog.so
 vendor/lib/libsettings.so
@@ -944,6 +986,7 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalfeature.so
 vendor/lib/libtime_genoff.so
 vendor/lib/libtinycompress.so
+vendor/lib/libtinyxml.so
 vendor/lib/libtinyxml2_1.so
 vendor/lib/libtrustedapploader.so
 vendor/lib/libVDClearShot.so
@@ -1061,8 +1104,10 @@ vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib/vendor.qti.hardware.data.iwlan@1.0.so
 vendor/lib/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
-#this will be removed in xpe 
+vendor/lib/vendor.qti.hardware.display.mapper@2.0.so
 vendor/lib/vendor.qti.hardware.display.mapper@3.0.so
+vendor/lib/vendor.qti.hardware.display.mapperextensions@1.0.so
+vendor/lib/vendor.qti.hardware.display.mapperextensions@1.1.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
 vendor/lib/vendor.qti.hardware.perf@2.0.so
 vendor/lib/vendor.qti.hardware.radio.am@1.0.so
@@ -1242,6 +1287,7 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gnss@2.0-impl-qti.so
+vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so
 vendor/lib64/hw/android.hardware.ir@1.0-impl.so
 vendor/lib64/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib64/hw/android.hardware.renderscript@1.0-impl.so
@@ -1256,6 +1302,9 @@ vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib64/hw/consumerir.default.so
 vendor/lib64/hw/fingerprint.fpc.default.so
 vendor/lib64/hw/fingerprint.goodix.default.so
+vendor/lib64/hw/gralloc.atoll.so
+vendor/lib64/hw/hwcomposer.atoll.so
+vendor/lib64/hw/memtrack.atoll.so
 vendor/lib64/hw/sound_trigger.primary.atoll.so
 vendor/lib64/hw/thermal.atoll.so
 vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so
@@ -1361,6 +1410,8 @@ vendor/lib64/libcvp_stub.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdisp-aba.so
+vendor/lib64/libdisplayconfig.so
+vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdng_sdkvendor.so
 vendor/lib64/libdpmqmihal.so
@@ -1397,6 +1448,9 @@ vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libgps.utils.so
+vendor/lib64/libgpu_tonemapper.so
+vendor/lib64/libgralloccore.so
+vendor/lib64/libgrallocutils.so
 vendor/lib64/libgsl.so
 vendor/lib64/libgui_vendor.so
 vendor/lib64/libHalSuperSensorServer.so
@@ -1511,6 +1565,7 @@ vendor/lib64/libqdi.so
 vendor/lib64/libqdma_file_agent.so
 vendor/lib64/libqdMetaData.so
 vendor/lib64/libqdp.so
+vendor/lib64/libqdutils.so
 vendor/lib64/libqisl.so
 vendor/lib64/libqmi.so
 vendor/lib64/libqmi_cci.so
@@ -1524,6 +1579,7 @@ vendor/lib64/libqrtr.so
 vendor/lib64/libqsap_sdk.so
 vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libqseed3.so
+vendor/lib64/libqservice.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libqti-iopd-client.so
 vendor/lib64/libqti-iopd.so
@@ -1553,6 +1609,7 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmextension.so
+vendor/lib64/libsdmutils.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libSEESalt.so
 vendor/lib64/libsensorndkbridge.so
@@ -1585,6 +1642,7 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalfeature.so
 vendor/lib64/libtime_genoff.so
 vendor/lib64/libtinycompress.so
+vendor/lib64/libtinyxml.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
@@ -1684,7 +1742,12 @@ vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib64/vendor.qti.hardware.display.allocator@1.0.so
+vendor/lib64/vendor.qti.hardware.display.mapper@1.0.so
+vendor/lib64/vendor.qti.hardware.display.mapper@2.0.so
 vendor/lib64/vendor.qti.hardware.display.mapper@3.0.so
+vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.0.so
+vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.1.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 vendor/lib64/vendor.qti.hardware.perf@2.0.so
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
