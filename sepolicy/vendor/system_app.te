@@ -1,0 +1,2 @@
+# to show battery status on some roms
+allow system_app sysfs_battery_supply:dir search;

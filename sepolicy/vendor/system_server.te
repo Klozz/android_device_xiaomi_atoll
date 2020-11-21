@@ -1,2 +1,5 @@
+#============= system_server ==============
+allow system_server vendor_default_prop:file { getattr map open read };
+
 # Smart charging
 allow system_server sysfs_battery_supply:file rw_file_perms;

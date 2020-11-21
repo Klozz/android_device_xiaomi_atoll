@@ -1,0 +1,2 @@
+#============= priv_app ==============
+allow priv_app hal_memtrack_hwservice:hwservice_manager find;

@@ -1,0 +1,3 @@
+#============= crash_dump ==============
+allow crash_dump hwservicemanager_prop:file { getattr map open };
+allow crash_dump vendor_display_prop:file { getattr map open };

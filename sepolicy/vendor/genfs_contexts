@@ -8,3 +8,4 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.q
 
 # Log call this node as vibrator idk
 genfscon sysfs /devices/platform/soc/890000.i2c/i2c-1/1-005a/name    u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/platform/soc/890000.i2c/i2c-1/1-005a/osc_save    u:object_r:sysfs_vibrator:s0

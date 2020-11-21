@@ -6,3 +6,8 @@ allow init sysfs_graphics:file rw_file_perms;
 
 #thermal config mount
 allow init vendor_configs_file:file mounton;
+
+allow init hal_misys_hwservice:hwservice_manager add;
+allow init hal_misys_default_exec:file execute;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder transfer;
