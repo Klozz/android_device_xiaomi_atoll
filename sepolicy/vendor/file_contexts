@@ -24,3 +24,8 @@ sys/devices/platform/soc/890000.i2c/i2c-1/1-005a(/.*)?  u:object_r:sysfs_vibrato
 /(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.misys@1\.0-service		u:object_r:hal_misys_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.misys@2\.0-service		u:object_r:hal_misys_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.misys@3\.0-service		u:object_r:hal_misys_default_exec:s0
+
+# Hexagon DSP-side executable needed for Halide operation
+# This is labeled as public_adsprpcd_file as it needs to be read by apps
+# (e.g. Google Camera App)
+/vendor/dsp/adsp/fastrpc_shell_0                 u:object_r:public_adsprpcd_file:s0

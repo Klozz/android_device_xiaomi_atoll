@@ -1,2 +1,4 @@
 # hal misys
 type hal_misys_default_exec, exec_type, vendor_file_type, file_type;
+
+type public_adsprpcd_file, file_type;

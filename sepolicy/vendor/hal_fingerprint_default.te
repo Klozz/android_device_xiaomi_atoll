@@ -2,6 +2,7 @@
 allow hal_fingerprint_default sysfs_fps_attr:file { read open write };
 allow hal_fingerprint_default tee_device:chr_file ioctl;
 allow hal_fingerprint_default vendor_data_file:file { getattr read open };
+allow hal_fingerprint_default vendor_data_file:dir rw_dir_perms;
 
 #allow hal_fingerprint_default default_android_hwservice:hwservice_manager add; neverallow
 allow hal_fingerprint_default init:unix_stream_socket connectto;

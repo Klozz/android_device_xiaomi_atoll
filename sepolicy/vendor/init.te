@@ -11,3 +11,8 @@ allow init hal_misys_hwservice:hwservice_manager add;
 allow init hal_misys_default_exec:file execute;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init hwservicemanager:binder transfer;
+
+#firmware
+allow init firmware_file:filesystem getattr;
+allow init bt_firmware_file:filesystem getattr;
+allow init adsprpcd_file:file mounton;
